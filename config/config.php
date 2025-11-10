@@ -2,6 +2,7 @@
 
 use App\Routes\Authenticated;
 use App\Routes\Unauthenticated;
+use Monolog\Level;
 use Odan\Session\Middleware\SessionStartMiddleware;
 use WebFramework\Middleware\AuthenticationMiddleware;
 use WebFramework\Middleware\CsrfValidationMiddleware;
@@ -73,6 +74,25 @@ return [
     'routes' => [
         Unauthenticated::class,
         Authenticated::class,
+    ],
+    'logging' => [
+        'channels' => [
+            'default' => [
+                'type' => 'file',
+                'path' => 'logs/app.log',
+                'level' => Level::Debug,
+            ],
+            'app' => [
+                'type' => 'file',
+                'path' => 'logs/app.log',
+                'level' => Level::Info,
+            ],
+            'exception' => [
+                'type' => 'file',
+                'path' => 'logs/exceptions.log',
+                'level' => Level::Error,
+            ],
+        ],
     ],
     'translations' => [
         'default_language' => 'en',
