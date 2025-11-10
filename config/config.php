@@ -2,6 +2,7 @@
 
 use App\Routes\Authenticated;
 use App\Routes\Unauthenticated;
+use App\Task\PostsStatsTask;
 use Monolog\Level;
 use Odan\Session\Middleware\SessionStartMiddleware;
 use WebFramework\Middleware\AuthenticationMiddleware;
@@ -100,5 +101,8 @@ return [
             '/vendor/avoutic/web-framework/translations',
             'translations',
         ],
+    ],
+    'console_tasks' => [
+        'posts:stats' => PostsStatsTask::class,
     ],
 ];

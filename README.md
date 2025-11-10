@@ -43,6 +43,7 @@ This demo app showcases the following WebFramework capabilities:
   - Dependency injection
   - Middleware stack
   - Route management
+  - Custom console tasks
 
 ## Installation
 
@@ -102,6 +103,19 @@ This demo includes a custom `AppRenderService` that automatically:
 
 This demonstrates how to extend the framework's rendering capabilities.
 
+### Custom Console Tasks
+
+This demo includes a custom console task `posts:stats` that displays statistics about posts in the database. This demonstrates how to:
+- Create custom console tasks by extending `ConsoleTask`
+- Register tasks in the `console_tasks` configuration
+- Use dependency injection in console tasks
+- Access repositories and display formatted output
+
+Run it with:
+```bash
+php framework posts:stats
+```
+
 ## Setup
 
 1. **Start the database and cache:**
@@ -122,7 +136,13 @@ This demonstrates how to extend the framework's rendering capabilities.
    php framework sanity:check
    ```
 
-4. **Configure Postmark** (see Configuration section above)
+4. **Try the custom console task:**
+   ```bash
+   php framework posts:stats
+   ```
+   This demonstrates how to create custom console tasks in WebFramework.
+
+5. **Configure Postmark** (see Configuration section above)
 
 ## Running the Demo
 
@@ -153,6 +173,7 @@ This demo also demonstrates the following capabilities:
 - Multi-language support with translation files
 - Logging
 - Event Dispatching and Listening
+- Custom console tasks (see `posts:stats` command)
 
 ## Project Structure
 
