@@ -152,6 +152,8 @@ This demo also demonstrates the following capabilities:
 - Database/ORM
 - Multi-language support with translation files
 - Logging
+- Event Dispatching and Listening
+
 ## Project Structure
 
 - `actions/` - Action classes handling HTTP requests

@@ -8,6 +8,7 @@ use App\Repository\PostRepository;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest as Request;
+use WebFramework\Event\EventService;
 use WebFramework\Exception\ValidationException;
 use WebFramework\Logging\LogService;
 use WebFramework\Presentation\MessageService;
@@ -24,6 +25,8 @@ class PostCreate
         private MessageService $messageService,
         private PostRepository $postRepository,
         private RenderService $renderer,
+        private EventService $eventService,
+        private LogService $logService,
     ) {}
 
     /**
@@ -68,12 +71,27 @@ class PostCreate
 
             $this->postRepository->save($post);
 
+            // Log post creation
+            $this->logService->info('app', 'Post created (Direct log)', [
+                'user_id' => $user->getId(),
+                'post_id' => $post->getId(),
+                'post_title' => $post->getTitle(),
+            ]);
+
+            // Dispatch PostCreated event
+            $this->eventService->dispatch(new PostCreated($request, $post));
+
             $this->messageService->add('success', 'Post created successfully');
 
             return $response->withHeader('Location', '/posts')->withStatus(302);
         }
         catch (ValidationException $e)
         {
+            $this->logService->warning('app', 'Post creation validation failed', [
+                'user_id' => $user->getId(),
+                'errors' => $e->getErrors(),
+            ]);
+
             $this->messageService->addErrors($e->getErrors());
             $all = $this->inputValidationService->getAll();
 
