@@ -74,4 +74,11 @@ return [
         Unauthenticated::class,
         Authenticated::class,
     ],
+    'translations' => [
+        'default_language' => 'en',
+        'directories' => [
+            '/vendor/avoutic/web-framework/translations',
+            'translations',
+        ],
+    ],
 ];

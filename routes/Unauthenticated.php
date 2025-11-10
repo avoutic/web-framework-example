@@ -34,5 +34,8 @@ class Unauthenticated implements RouteSet
         $app->get('/verify', \WebFramework\Actions\Verify::class);
         $app->post('/verify', \WebFramework\Actions\Verify::class);
         $app->post('/verify/resend', \WebFramework\Actions\VerifyResend::class);
+
+        // Translations demo
+        $app->get('/translations-demo', \App\Actions\TranslationsDemo::class);
     }
 }
