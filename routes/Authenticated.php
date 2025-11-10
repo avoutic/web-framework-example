@@ -28,6 +28,14 @@ class Authenticated implements RouteSet
             $group->get('/change-email', \WebFramework\Actions\ChangeEmail::class);
             $group->post('/change-email', \WebFramework\Actions\ChangeEmail::class);
             $group->get('/change-email/verify', \WebFramework\Actions\ChangeEmailVerify::class);
+
+            // Posts (Database/ORM demo)
+            $group->get('/posts', \App\Actions\PostsList::class);
+            $group->get('/posts/create', \App\Actions\PostCreate::class);
+            $group->post('/posts/create', \App\Actions\PostCreate::class);
+            $group->get('/posts/{id}/edit', \App\Actions\PostEdit::class);
+            $group->post('/posts/{id}/edit', \App\Actions\PostEdit::class);
+            $group->get('/posts/{id}/delete', \App\Actions\PostDelete::class);
         })
             ->add($this->loggedInMiddleware)
         ;

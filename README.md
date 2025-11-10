@@ -30,6 +30,13 @@ This demo app showcases the following WebFramework capabilities:
   - Verification code emails
   - Transactional email sending
 
+- **Database/ORM**
+  - Entity/Repository pattern
+  - CRUD operations (Create, Read, Update, Delete)
+  - Database migrations
+  - Entity collections
+  - Foreign key relationships
+
 - **Infrastructure**
   - Database integration (MySQL/MariaDB)
   - Redis caching
@@ -108,6 +115,8 @@ This demonstrates how to extend the framework's rendering capabilities.
    php framework db:migrate
    ```
 
+   This will create the `posts` table needed for the Database/ORM demo.
+
 3. **Run sanity checks:**
    ```bash
    php framework sanity:check
@@ -135,9 +144,12 @@ Once running, you can:
 4. **Change password** - Test password management
 5. **Change email** - See email verification flow
 6. **Reset password** - Try the password reset functionality
+7. **Create and manage posts** - See Database/ORM capabilities with full CRUD operations
 
 All forms include validation, CSRF protection, and user-friendly error messages.
 
+This demo also demonstrates the following capabilities:
+- Database/ORM
 ## Project Structure
 
 - `actions/` - Action classes handling HTTP requests
