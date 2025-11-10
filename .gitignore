@@ -1,0 +1,15 @@
+.env
+.env*
+
+# Local dev files
+config/config_local.php
+definitions/local_definitions.php
+
+# Generated directories / files
+vendor/
+framework
+db_web_framework/
+.php-cs-fixer.cache
+
+# Temporary files
+*.swp

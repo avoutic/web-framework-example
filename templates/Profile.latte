@@ -1,0 +1,25 @@
+{extends base.latte}
+
+{block title}Profile - WebFramework Demo{/block}
+
+{block content}
+<h1>User Profile</h1>
+
+<div class="user-info">
+    <h2>Account Information</h2>
+    <p><strong>Username:</strong> {$username}</p>
+    <p><strong>Email:</strong> {$email}</p>
+    <p><strong>Email Verified:</strong> {if $verified}Yes{else}No - Please verify your email{/if}</p>
+    {if $registered_at}
+        <p><strong>Account Registered:</strong> {$registered_at|date:'Y-m-d H:i:s'}</p>
+    {/if}
+</div>
+
+<div class="links">
+    <a href="/change-password">Change Password</a>
+    <a href="/change-email">Change Email</a>
+    <a href="/">Back to Home</a>
+</div>
+{/block}
+
+

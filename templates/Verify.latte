@@ -1,0 +1,34 @@
+{extends base.latte}
+
+{block title}Verify Email - WebFramework Demo{/block}
+
+{block content}
+<h1>Email Verification</h1>
+
+<p>Please enter the verification code that was sent to your email address.</p>
+
+<form method="post" action="/verify">
+    <fieldset>
+        <input type="hidden" name="token" value="{$csrfToken}"/>
+        <input type="hidden" name="guid" value="{$guid}"/>
+        <legend>Verification Code</legend>
+        <p>
+            <label for="code">Verification Code</label>
+            <input type="text" id="code" name="code" value="{$code}" autocomplete="off" maxlength="10" pattern="[A-Za-z0-9]+" required placeholder="Enter 6-digit code"/>
+        </p>
+        <p>
+            <input type="submit" value="Verify" />
+        </p>
+    </fieldset>
+</form>
+
+<p>
+    <form method="post" action="/verify/resend">
+        <input type="hidden" name="token" value="{$csrfToken}"/>
+        <input type="hidden" name="guid" value="{$guid}"/>
+        <input type="submit" value="Resend verification code" />
+    </form>
+</p>
+{/block}
+
+

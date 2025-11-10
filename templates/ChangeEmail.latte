@@ -1,0 +1,29 @@
+{extends base.latte}
+
+{block title}Change Email - WebFramework Demo{/block}
+
+{block content}
+<h1>Change Email</h1>
+
+<p>Enter your new email address. A verification code will be sent to the new address.</p>
+
+<form method="post" action="/change-email">
+    <fieldset>
+        <input type="hidden" name="token" value="{$csrfToken}"/>
+        <legend>New Email Address</legend>
+        <p>
+            <label for="email">New E-mail</label>
+            <input type="email" id="email" name="email" value="{$email}" required autocomplete="email"/>
+        </p>
+        <p>
+            <input type="submit" value="Change Email" />
+        </p>
+    </fieldset>
+</form>
+
+<div class="links">
+    <a href="/profile">Back to Profile</a>
+</div>
+{/block}
+
+

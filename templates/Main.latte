@@ -1,0 +1,48 @@
+{extends base.latte}
+
+{block title}Home - WebFramework Demo{/block}
+
+{block content}
+<h1>WebFramework Demo Application</h1>
+
+<p>Welcome to the WebFramework demo application! This showcases the authentication and user management capabilities of the framework.</p>
+
+{if $user}
+    <div class="user-info">
+        <h2>You are logged in</h2>
+        <p><strong>Username:</strong> {$user->getUsername()}</p>
+        <p><strong>Email:</strong> {$user->getEmail()}</p>
+        <p><strong>Verified:</strong> {if $user->isVerified()}Yes{else}No{/if}</p>
+    </div>
+    <ul class="links">
+        <li><a href="/profile">View Profile</a></li>
+        <li><a href="/change-password">Change Password</a></li>
+        <li><a href="/change-email">Change Email</a></li>
+        <li><a href="/logoff">Logout</a></li>
+    </ul>
+{else}
+    <div class="info-box">
+        <h2>Get Started</h2>
+        <p>To explore the authentication features:</p>
+        <ul>
+            <li><a href="/register">Register</a> a new account</li>
+            <li><a href="/login">Login</a> to an existing account</li>
+            <li>Try password reset if you forget your password</li>
+        </ul>
+    </div>
+    <ul class="links">
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+    </ul>
+{/if}
+
+<h2>Framework Capabilities Demonstrated</h2>
+<ul>
+    <li>User Registration with Email Verification</li>
+    <li>Login/Logout Functionality</li>
+    <li>Password Reset Flow</li>
+    <li>Email Change with Verification</li>
+    <li>Password Change</li>
+    <li>CSRF Protection</li>
+</ul>
+{/block}

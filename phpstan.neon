@@ -1,0 +1,18 @@
+includes:
+	- phpstan-core.neon
+	- phpstan-baseline.neon
+
+parameters:
+    level: 8
+    phpVersion: 80200
+    paths:
+        - config
+        - definitions
+        - src
+        - actions
+        - scripts
+        - public
+        - vendor
+    excludePaths:
+        analyse:
+            - vendor

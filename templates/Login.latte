@@ -1,0 +1,37 @@
+{extends base.latte}
+
+{block title}Login - WebFramework Demo{/block}
+
+{block content}
+<h1>Login</h1>
+
+<p>Enter your credentials to access your account.</p>
+
+<form method="post" action="/login">
+    <fieldset>
+        <input type="hidden" name="token" value="{$csrfToken}"/>
+        <input type="hidden" name="return_page" value="{$returnPage}"/>
+        <input type="hidden" name="return_query" value="{$returnQuery}"/>
+        <legend>Login form</legend>
+        <p>
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" value="{$username}" autocomplete="username" required/>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="current-password" required/>
+        </p>
+
+        <p>
+            <input type="submit" value="Login" />
+        </p>
+    </fieldset>
+</form>
+
+<div class="links">
+    <a href="{$resetPasswordLocation}">Forgot your password?</a>
+    <a href="{$registerLocation}">No account yet? Register</a>
+</div>
+{/block}
+
+

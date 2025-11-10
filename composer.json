@@ -1,0 +1,61 @@
+{
+    "name": "avoutic/web-framework-skeleton",
+    "description": "WebFramework skeleton project",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "security",
+        "skeleton",
+        "example"
+    ],
+    "homepage": "https://github.com/avoutic/web-framework-skeleton/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Avoutic",
+            "email": "avoutic@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/avoutic/web-framework-skeleton/issues",
+        "source": "https://github.com/avoutic/web-framework-skeleton"
+    },
+    "require": {
+        "avoutic/web-framework": "^11.0",
+        "avoutic/web-framework-mysql": "^3",
+        "avoutic/web-framework-redis": "^3",
+        "avoutic/web-framework-postmark": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "App\\Actions\\": "actions/",
+            "App\\Routes\\": "routes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WebFramework\\PHPStan\\": "vendor/avoutic/web-framework/phpstan/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"copy('vendor/avoutic/web-framework/public/index.php', 'public/index.php');\"",
+            "mkdir -p scripts",
+            "php -r \"copy('vendor/avoutic/web-framework/scripts/framework.php', 'framework');\""
+        ],
+        "post-update-cmd": [
+            "php -r \"copy('vendor/avoutic/web-framework/public/index.php', 'public/index.php');\"",
+            "mkdir -p scripts",
+            "php -r \"copy('vendor/avoutic/web-framework/scripts/framework.php', 'framework');\""
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1"
+    }
+}
