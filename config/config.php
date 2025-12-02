@@ -78,11 +78,8 @@ return [
     ],
     'logging' => [
         'channels' => [
-            'default' => [
-                'type' => 'file',
-                'path' => 'logs/app.log',
-                'level' => Level::Debug,
-            ],
+            // The default channel can be defined here, similar to the app channel,
+            // but to show capabilities, we'll define it in the app_definitions.php file.
             'app' => [
                 'type' => 'file',
                 'path' => 'logs/app.log',
