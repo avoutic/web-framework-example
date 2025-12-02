@@ -1,13 +1,14 @@
 services:
   web_framework_db:
-    image: mariadb:10.5
+    image: mariadb:11.8
     container_name: web_framework_db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: 'web_framework'
-      MYSQL_USER: 'web_framework'
-      MYSQL_PASSWORD: 'testpassword'
-      MYSQL_ROOT_PASSWORD: 'testpassword'
+      MARIADB_DATABASE: 'web_framework'
+      MARIADB_USER: 'web_framework'
+      MARIADB_PASSWORD: 'testpassword'
+      MARIADB_ROOT_PASSWORD: 'testpassword'
+      MARIADB_AUTO_UPGRADE: true
     ports:
       - 127.0.0.1:3399:3306
     volumes:
