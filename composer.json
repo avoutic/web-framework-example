@@ -21,8 +21,8 @@
         "source": "https://github.com/avoutic/web-framework-skeleton"
     },
     "require": {
-        "avoutic/web-framework": "^11.0",
-        "avoutic/web-framework-mysql": "^3",
+        "avoutic/web-framework": "^11.4",
+        "avoutic/web-framework-mysql": "^4",
         "avoutic/web-framework-redis": "^3",
         "avoutic/web-framework-postmark": "^3.0"
     },

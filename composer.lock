@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c44b73fbe36ecb472f049afce68596a",
+    "content-hash": "89102c7a25dd6af4040b5ad01d5ae2c0",
     "packages": [
         {
             "name": "avoutic/web-framework",
-            "version": "11.0.1",
+            "version": "11.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avoutic/web-framework.git",
-                "reference": "3f183fd57e512728af26d2973432eb25161b9336"
+                "reference": "d7a2431995ffbdaba911c0ba3e30c45ce46892da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avoutic/web-framework/zipball/3f183fd57e512728af26d2973432eb25161b9336",
-                "reference": "3f183fd57e512728af26d2973432eb25161b9336",
+                "url": "https://api.github.com/repos/avoutic/web-framework/zipball/d7a2431995ffbdaba911c0ba3e30c45ce46892da",
+                "reference": "d7a2431995ffbdaba911c0ba3e30c45ce46892da",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,8 @@
                 "codeception/module-asserts": "^3.0",
                 "codeception/verify": "^3.0",
                 "haydenpierce/class-finder": "^0.5.3",
-                "phpstan/phpstan": "^2.0"
+                "phpstan/phpstan": "^2.0",
+                "phpunit/php-code-coverage": "^11.0"
             },
             "type": "library",
             "autoload": {
@@ -60,35 +61,47 @@
                     "email": "avoutic@gmail.com"
                 }
             ],
-            "description": "web-framework is a secure-by-default PHP framework for quickly making PHP sites and APIs",
+            "description": "A lightweight, secure-by-default PHP microframework built on Slim – providing Laravel-like features (ORM, authentication, migrations, caching) without the bloat. Perfect for building REST APIs and small-to-medium PHP applications.",
             "homepage": "https://web-framework.com",
             "keywords": [
+                "Authentication",
+                "api-framework",
                 "framework",
-                "security"
+                "laravel-alternative",
+                "microframework",
+                "migrations",
+                "orm",
+                "php-framework",
+                "psr-15",
+                "psr-7",
+                "rest-api",
+                "security",
+                "slim",
+                "slim-framework"
             ],
             "support": {
                 "docs": "https://web-framework.com",
                 "issues": "https://github.com/avoutic/web-framework/issues",
                 "source": "https://github.com/avoutic/web-framework"
             },
-            "time": "2025-11-10T18:50:09+00:00"
+            "time": "2025-12-07T20:00:35+00:00"
         },
         {
             "name": "avoutic/web-framework-mysql",
-            "version": "3.0.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avoutic/web-framework-mysql.git",
-                "reference": "541b0e40e08a914f799ce7441ac09d3cf98c98cd"
+                "reference": "2a47fcc2b4be69a03d5ef40720e32057556ef4ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avoutic/web-framework-mysql/zipball/541b0e40e08a914f799ce7441ac09d3cf98c98cd",
-                "reference": "541b0e40e08a914f799ce7441ac09d3cf98c98cd",
+                "url": "https://api.github.com/repos/avoutic/web-framework-mysql/zipball/2a47fcc2b4be69a03d5ef40720e32057556ef4ba",
+                "reference": "2a47fcc2b4be69a03d5ef40720e32057556ef4ba",
                 "shasum": ""
             },
             "require": {
-                "avoutic/web-framework": "^11",
+                "avoutic/web-framework": "^11.4",
                 "ext-mysqli": "*"
             },
             "require-dev": {
@@ -118,9 +131,9 @@
             "homepage": "https://web-framework.com",
             "support": {
                 "issues": "https://github.com/avoutic/web-framework-mysql/issues",
-                "source": "https://github.com/avoutic/web-framework-mysql/tree/3.0.0"
+                "source": "https://github.com/avoutic/web-framework-mysql/tree/4.0.0"
             },
-            "time": "2025-11-07T12:26:45+00:00"
+            "time": "2025-12-07T20:14:00+00:00"
         },
         {
             "name": "avoutic/web-framework-postmark",
