@@ -113,7 +113,7 @@ This demo includes a custom console task `posts:stats` that displays statistics 
 
 Run it with:
 ```bash
-php framework posts:stats
+vendor/bin/framework posts:stats
 ```
 
 ## Setup
@@ -125,20 +125,20 @@ php framework posts:stats
 
 2. **Check database status and run migrations:**
    ```bash
-   php framework db:status
-   php framework db:migrate
+   vendor/bin/framework db:status
+   vendor/bin/framework db:migrate
    ```
 
    This will create the `posts` table needed for the Database/ORM demo.
 
 3. **Run sanity checks:**
    ```bash
-   php framework sanity:check
+   vendor/bin/framework sanity:check
    ```
 
 4. **Try the custom console task:**
    ```bash
-   php framework posts:stats
+   vendor/bin/framework posts:stats
    ```
    This demonstrates how to create custom console tasks in WebFramework.
 

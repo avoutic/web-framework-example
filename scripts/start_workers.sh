@@ -6,20 +6,20 @@ cd "$(dirname "$0")/.."
 echo "Starting workers..."
 
 # Start 3 workers for 'tasks' queue
-./framework queue:worker tasks &
+vendor/bin/framework queue:worker tasks &
 PID1=$!
 echo "Started worker for tasks (PID: $PID1)"
 
-./framework queue:worker tasks &
+vendor/bin/framework queue:worker tasks &
 PID2=$!
 echo "Started worker for tasks (PID: $PID2)"
 
-./framework queue:worker tasks &
+vendor/bin/framework queue:worker tasks &
 PID3=$!
 echo "Started worker for tasks (PID: $PID3)"
 
 # Start 1 worker for 'mails' queue
-./framework queue:worker mails &
+vendor/bin/framework queue:worker mails &
 PID4=$!
 echo "Started worker for mails (PID: $PID4)"
 

@@ -1,5 +1,5 @@
 includes:
-	- phpstan-core.neon
+	- vendor/avoutic/web-framework/phpstan-core.neon
 	- phpstan-baseline.neon
 
 parameters:

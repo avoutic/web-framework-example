@@ -1,5 +1,0 @@
-services:
-    -
-        class: WebFramework\PHPStan\EntityIdPropertiesExtension
-        tags:
-            - phpstan.properties.readWriteExtension

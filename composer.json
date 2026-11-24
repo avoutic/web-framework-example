@@ -21,10 +21,10 @@
         "source": "https://github.com/avoutic/web-framework-skeleton"
     },
     "require": {
-        "avoutic/web-framework": "^11.4",
-        "avoutic/web-framework-mysql": "^4",
-        "avoutic/web-framework-redis": "^3",
-        "avoutic/web-framework-postmark": "^3.0"
+        "avoutic/web-framework": "^12",
+        "avoutic/web-framework-mysql": "^5",
+        "avoutic/web-framework-redis": "^4",
+        "avoutic/web-framework-postmark": "^4"
     },
     "autoload": {
         "psr-4": {
@@ -33,21 +33,12 @@
             "App\\Routes\\": "routes/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "WebFramework\\PHPStan\\": "vendor/avoutic/web-framework/phpstan/"
-        }
-    },
     "scripts": {
         "post-install-cmd": [
-            "php -r \"copy('vendor/avoutic/web-framework/public/index.php', 'public/index.php');\"",
-            "mkdir -p scripts",
-            "php -r \"copy('vendor/avoutic/web-framework/scripts/framework.php', 'framework');\""
+            "framework-publish"
         ],
         "post-update-cmd": [
-            "php -r \"copy('vendor/avoutic/web-framework/public/index.php', 'public/index.php');\"",
-            "mkdir -p scripts",
-            "php -r \"copy('vendor/avoutic/web-framework/scripts/framework.php', 'framework');\""
+            "framework-publish"
         ]
     },
     "config": {

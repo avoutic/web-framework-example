@@ -45,13 +45,13 @@ return [
         'assert_recipient' => env('ASSERT_RECIPIENT_EMAIL'),
     ],
     'definition_files' => [
-        '../vendor/avoutic/web-framework/definitions/definitions.php',
-        '../vendor/avoutic/web-framework-mysql/definitions/definitions.php',
-        '../vendor/avoutic/web-framework-redis/definitions/definitions.php',
-        '../vendor/avoutic/web-framework-postmark/definitions/definitions.php',
-        'web_framework_overrides.php',
-        'app_definitions.php',
-        '?local_definitions.php',
+        '/vendor/avoutic/web-framework/definitions/definitions.php',
+        '/vendor/avoutic/web-framework-mysql/definitions/definitions.php',
+        '/vendor/avoutic/web-framework-redis/definitions/definitions.php',
+        '/vendor/avoutic/web-framework-postmark/definitions/definitions.php',
+        '/definitions/web_framework_overrides.php',
+        '/definitions/app_definitions.php',
+        '?/definitions/local_definitions.php',
     ],
     'middlewares' => [
         'pre_routing' => [

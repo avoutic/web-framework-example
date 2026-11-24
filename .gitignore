@@ -7,7 +7,6 @@ definitions/local_definitions.php
 
 # Generated directories / files
 vendor/
-framework
 db_web_framework/
 .php-cs-fixer.cache
 logs/*
